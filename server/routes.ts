@@ -94,7 +94,7 @@ function extractMetaTags($: cheerio.CheerioAPI, url: string): SeoAnalysis {
     const content = $(el).attr('content');
     
     if ((name || property) && content) {
-      const key = name || property || '';
+      const key = property || name || '';
       allMetaTags[key] = content;
     }
   });
